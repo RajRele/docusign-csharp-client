@@ -13,5 +13,4 @@ services:
 
 install:
   - dotnet restore ./sdk/src/DocuSign.eSign/DocuSign.eSign.csproj
-  - dotnet build --framework net45 ./sdk/src/DocuSign.eSign/DocuSign.eSign.csproj
   - dotnet build --framework netstandard2.0 ./sdk/src/DocuSign.eSign/DocuSign.eSign.csproj
