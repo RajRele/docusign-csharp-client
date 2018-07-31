@@ -1,4 +1,5 @@
-try{
+try
+{
 Write-Host "Cleaning!" -ForegroundColor Yellow
 msbuild ./sdk/src/DocuSign.eSign/DocuSign.eSign.csproj /t:clean /verbosity:minimal
 if ($lastExitCode -ne 0) { exit $lastExitCode }
