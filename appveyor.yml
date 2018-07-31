@@ -11,4 +11,6 @@ test_script:
 
     dotnet build --framework netcoreapp2.0 ./test/SdkNetCoreTests/SdkNetCoreTests.csproj
 
-    Vstest.console.exe ./test/SdkTests/bin/Debug/SdkTests.dll ./test/SdkNetCoreTests/bin/Debug/netcoreapp2.0/SdkNetCoreTests.dll
+    Vstest.console.exe /Framework:framework45 ./test/SdkTests/bin/Debug/SdkTests.dll
+
+    Vstest.console.exe ./test/SdkNetCoreTests/bin/Debug/netcoreapp2.0/SdkNetCoreTests.dll
