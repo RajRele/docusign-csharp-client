@@ -6,11 +6,9 @@ branches:
 build_script:
 - ps: . ./build.ps1
 test_script:
-- ps: >-
+- ps: >- 
     dotnet build --framework net45 ./test/SdkTests/SdkTests.csproj
-
-    dotnet test ./test/SdkTests/SdkTests.csproj
 
     dotnet build --framework netcoreapp2.0 ./test/SdkNetCoreTests/SdkNetCoreTests.csproj
 
-    dotnet test ./test/SdkNetCoreTests/SdkNetCoreTests.csproj
+    Vstest.console.exe ./test/SdkTests/bin/Debug/SdkTests.dll ./test/SdkNetCoreTests/bin/Debug/netcoreapp2.0/SdkNetCoreTests.dll
