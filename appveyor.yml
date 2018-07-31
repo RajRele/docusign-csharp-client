@@ -4,7 +4,7 @@ branches:
   only:
     - master
 build_script:
-- ps: . ./build.ps1
+- ps: . ./csharp-build.ps1
 test_script:
 - ps: >- 
     dotnet build --framework net45 ./test/SdkTests/SdkTests.csproj
