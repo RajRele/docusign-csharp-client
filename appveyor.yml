@@ -4,6 +4,8 @@ build_script:
 - ps: . ./build.ps1
 test_script:
 - ps: >-
+    dotnet restore ./test/SdkTests/SdkTests.csproj
+
     dotnet build --framework net45 ./test/SdkTests/SdkTests.csproj
 
     dotnet test ./test/SdkTests/SdkTests.csproj
