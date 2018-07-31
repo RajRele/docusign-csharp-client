@@ -13,4 +13,6 @@ services:
 
 install:
   - dotnet restore ./sdk/src/DocuSign.eSign/DocuSign.eSign.csproj
+
+script:
   - dotnet build --framework netstandard2.0 ./sdk/src/DocuSign.eSign/DocuSign.eSign.csproj
