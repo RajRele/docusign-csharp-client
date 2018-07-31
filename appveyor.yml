@@ -11,6 +11,6 @@ test_script:
 
     dotnet build --framework netcoreapp2.0 ./test/SdkNetCoreTests/SdkNetCoreTests.csproj
 
-    dotnet test ./test/SdkTests/SdkTests.csproj --verbosity d
+    dotnet test ./test/SdkTests/SdkTests.csproj --verbosity m
 
-    dotnet test ./test/SdkNetCoreTests/SdkNetCoreTests.csproj --verbosity diag
+    dotnet test ./test/SdkNetCoreTests/SdkNetCoreTests.csproj --verbosity m
