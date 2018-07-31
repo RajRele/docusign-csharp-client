@@ -23,7 +23,7 @@ Write-Host "Cleaning SdkTests!" -ForegroundColor Yellow
 msbuild ./test/SdkTests/SdkTests.csproj /t:clean /verbosity:minimal
 if ($lastExitCode -ne 0) { exit $lastExitCode }
     
-Write-Host "Restoring and Building SdkTests for Net4.5" -ForegroundColor Yellow
+Write-Host "Restoring SdkTests for Net4.5" -ForegroundColor Yellow
 msbuild ./test/SdkTests/SdkTests.csproj /t:restore /p:TargetFramework=net45 /verbosity:minimal
 if ($lastExitCode -ne 0) { exit $lastExitCode }
 
