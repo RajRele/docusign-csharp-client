@@ -4,6 +4,8 @@ build_script:
 - ps: . ./build.ps1
 test_script:
 - ps: >-
+    dotnet test ./test/SdkTests/SdkTests.csproj
+
     dotnet build --framework netcoreapp2.0 ./test/SdkNetCoreTests/SdkNetCoreTests.csproj
 
     dotnet test ./test/SdkNetCoreTests/SdkNetCoreTests.csproj
