@@ -8,12 +8,8 @@ sudo: required
 dist: trusty
 dotnet: 2.1.2
 
-services:
-  - docker
-
 install:
   - dotnet restore ./sdk/src/DocuSign.eSign/DocuSign.eSign.csproj
 
 script:
   - dotnet build --framework netstandard2.0 ./sdk/src/DocuSign.eSign/DocuSign.eSign.csproj
-  - dotnet build --framework net45 ./sdk/src/DocuSign.eSign/DocuSign.eSign.csproj
