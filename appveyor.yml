@@ -13,4 +13,4 @@ test_script:
 
     dotnet test ./test/SdkTests/SdkTests.csproj --verbosity m
 
-    dotnet test ./test/SdkNetCoreTests/SdkNetCoreTests.csproj --verbosity m
+    dotnet test ./test/SdkNetCoreTests/SdkNetCoreTests.csproj --verbosity n

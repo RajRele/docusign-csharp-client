@@ -19,15 +19,6 @@ if ($lastExitCode -ne 0) { exit $lastExitCode }
 Write-Host "`nBuilding DocuSign.eSign for NetStandard2.0" -ForegroundColor Yellow
 msbuild ./sdk/src/DocuSign.eSign/DocuSign.eSign.csproj /p:TargetFramework=netstandard2.0 /p:Configuration=Debug /verbosity:minimal
 if ($lastExitCode -ne 0) { exit $lastExitCode }
-
-Write-Host "`nCleaning SdkTests!" -ForegroundColor Yellow
-msbuild ./test/SdkTests/SdkTests.csproj /t:clean /verbosity:minimal
-if ($lastExitCode -ne 0) { exit $lastExitCode }
-
-Write-Host "`nRe-Building SdkTests for Net45" -ForegroundColor Yellow
-nuget install ./test/SdkTests/packages.config -OutputDirectory ./test/packages
-msbuild ./test/SdkTests/SdkTests.csproj /t:rebuild /verbosity:minimal
-if ($lastExitCode -ne 0) { exit $lastExitCode }
 }
 catch {
     Write-Host "`nSomething went wrong!" -ForegroundColor Red
