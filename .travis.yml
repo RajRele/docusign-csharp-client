@@ -8,5 +8,11 @@ sudo: required
 dist: trusty
 dotnet: 1.1.5
 
-script:
-    - dotnet build --framework net45 --configuration Debug ./sdk/src/DocuSign.eSign/DocuSign.eSign.csproj --verbosity m
+services:
+  - docker
+
+install:
+  - dotnet restore ./sdk/src/DocuSign.eSign/DocuSign.eSign.csproj
+  - dotnet build --framework net45 ./sdk/src/DocuSign.eSign/DocuSign.eSign.csproj
+  - dotnet build --framework netstandard2.0 ./sdk/src/DocuSign.eSign/DocuSign.eSign.csproj
+  - dotnet build --framework netcoreapp1.1 test/Twilio.Test/Twilio.Test.csproj
