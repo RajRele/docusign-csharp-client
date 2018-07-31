@@ -9,4 +9,4 @@ dist: trusty
 dotnet: 1.1.5
 
 script:
-    - dotnet build ./sdk/src/DocuSign.eSign/DocuSign.eSign.csproj --verbosity m
+    - dotnet build --framework net45 --configuration Debug ./sdk/src/DocuSign.eSign/DocuSign.eSign.csproj --verbosity m
