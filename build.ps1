@@ -29,7 +29,6 @@ if ($lastExitCode -ne 0) { exit $lastExitCode }
 
 Write-Host "ReBuilding SdkTests for Net4.5" -ForegroundColor Yellow
 nuget install ./test/SdkTests/packages.config -OutputDirectory ./test/packages
-nuget restore ./test/SdkTests/SdkTests.csproj
 msbuild ./test/SdkTests/SdkTests.csproj /t:rebuild /verbosity:minimal
 if ($lastExitCode -ne 0) { exit $lastExitCode }
 }
