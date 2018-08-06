@@ -5,12 +5,7 @@
 [![Build status][travis-image]][travis-url]
 [![Build status][appveyor-image]][appveyor-url]
 
-You can sign up for a free [developer sandbox](https://developers.docusign.com/). 
-
-Recent Update
-============
-The current DocuSign C# SDK release, v3.0.0-rc, is being released as a preliminary update that provides support for .NET Standard 2.0, .NET Core 2.0, and .NET Framework 4.5 or later. You can go back to use the previous, non-RC version of the DocuSign C# SDK [here](https://github.com/docusign/docusign-csharp-client/tree/v2.2.1).
-
+You can sign up for a free [developer sandbox](https://developers.docusign.com/).
 
 Requirements
 ============
